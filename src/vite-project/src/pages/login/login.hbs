@@ -1,0 +1,10 @@
+<div class="container">
+    {{#> AuthForm }}
+        <h1>Авторизация</h1>
+        {{> Input type="text" label="Login"}}
+        {{> Input type="password" label="Password"}}
+
+        {{> Button label="Log in" type="button" page="main" }}
+        {{> Button label="No account?" type="button_link" page="signup" }}
+    {{/AuthForm}}
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+    {{#> AuthForm }}
+        <h1>Регистрация</h1>
+        {{> Input type="email" label="Почта" }}
+        {{> Input type="text" label="Логин" }}
+        {{> Input type="text" label="Имя" }}
+        {{> Input type="text" label="Фамилия" }}
+        {{> Input type="tel" label="Телефон" }}
+
+        {{> Input type="password" label="Пароль" }}
+        {{> Input type="password" label="Пароль еще раз" }}
+
+        {{> Button label="Log in" type="button" page="main" }}
+        {{> Button label="No account?" type="button_link" page="signup" }}
+    {{/AuthForm}}
+</div>
