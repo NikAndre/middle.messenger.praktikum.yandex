@@ -1,6 +1,7 @@
+// @ts-ignore
 import Handlebars from 'handlebars';
-import  * as Components from './components';
-import  * as Pages from './pages';
+import  * as Components from './components/index';
+import  * as Pages from './pages/index';
 
 
 const pages = {
@@ -13,6 +14,7 @@ Object.entries(Components).forEach(([name,component]) => {
 });
 
 function navigate (page:string) {
+    // @ts-ignore
     const [source, content] = pages[page];
     const container = document.getElementById('app')!;
     container.innerHTML = Handlebars.compile(source)(content);
@@ -21,7 +23,8 @@ function navigate (page:string) {
 document.addEventListener('DOMContentLoaded', () => navigate('login'));
 
 document.addEventListener('click', e => {
-    const page = e.target.getAttribute('page');
+    // @ts-ignore
+    const page = e.target?.getAttribute('page');
     if (page) {
         navigate(page);
 
